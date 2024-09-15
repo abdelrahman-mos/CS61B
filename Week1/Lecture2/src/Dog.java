@@ -14,4 +14,12 @@ public class Dog {
             System.out.println("Aroooooooo!");
         }
     }
+
+    public static Dog maxDog(Dog d1, Dog d2) {
+        return d1.weightInPounds > d2.weightInPounds ? d1 : d2;
+    }
+
+    public Dog maxDog(Dog d2) {
+        return this.weightInPounds > d2.weightInPounds ? this : d2;
+    }
 }
