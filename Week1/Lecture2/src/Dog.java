@@ -23,4 +23,10 @@ public class Dog {
     public Dog maxDog(Dog d2) {
         return this.weightInPounds > d2.weightInPounds ? this : d2;
     }
+
+    public static Dog[] largerThanFourNeighbors(Dog[] dogs) {
+        Dog[] largerDogs = new Dog[dogs.length];
+        System.arraycopy(dogs, 0, largerDogs, 0, largerDogs.length);
+        return largerDogs;
+    }
 }
