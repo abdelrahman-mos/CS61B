@@ -31,5 +31,6 @@ public class DogLargerThanFourSolution {
 
     public static boolean isValidIndex(Dog[] dogs, int index) {
         return index >= 0 && index < dogs.length;
+
     }
 }

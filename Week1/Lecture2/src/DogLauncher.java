@@ -28,7 +28,9 @@ public class DogLauncher {
         Dog[] outDogs = DogLargerThanFourSolution.largerThanFourNeighbors(dogs);
 
         for (Dog d : outDogs) {
-            System.out.println(d.weightInPounds);
+            if (d != null) {
+                System.out.println(d.weightInPounds);
+            }
         }
     }
 }
