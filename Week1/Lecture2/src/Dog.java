@@ -1,5 +1,6 @@
 public class Dog {
     public int weightInPounds;
+    public static String binomen = "canis familiaris";
 
     public Dog(int weightInPounds) {
         this.weightInPounds = weightInPounds;

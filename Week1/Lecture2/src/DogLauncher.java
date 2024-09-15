@@ -11,5 +11,7 @@ public class DogLauncher {
         Dog.maxDog(maya, kabir).makeNoise();
 
         kabir.maxDog(maya).makeNoise();
+
+        System.out.println(Dog.binomen);
     }
 }
