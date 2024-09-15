@@ -1,6 +1,10 @@
 public class Dog {
     public int weightInPounds;
 
+    public Dog(int weightInPounds) {
+        this.weightInPounds = weightInPounds;
+    }
+
     public void makeNoise() {
         if (weightInPounds < 5) {
             System.out.println("yipyipy!");
