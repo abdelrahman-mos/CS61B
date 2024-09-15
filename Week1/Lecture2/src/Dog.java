@@ -1,5 +1,13 @@
 public class Dog {
-    public static void makeNoise() {
-        System.out.println("bark!");
+    public int weightInPounds;
+
+    public void makeNoise() {
+        if (weightInPounds < 5) {
+            System.out.println("yipyipy!");
+        } else if (weightInPounds < 30) {
+            System.out.println("bark!");
+        } else {
+            System.out.println("Aroooooooo!");
+        }
     }
 }
