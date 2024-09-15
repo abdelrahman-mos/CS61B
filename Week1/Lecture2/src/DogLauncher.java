@@ -14,17 +14,21 @@ public class DogLauncher {
 
         System.out.println(Dog.binomen);
         Dog[] dogs = new Dog[10];
-        dogs[0] = new Dog(5);
-        dogs[1] = new Dog(4);
-        dogs[2] = new Dog(3);
-        dogs[3] = new Dog(2);
-        dogs[4] = new Dog(1);
-        dogs[5] = new Dog(3);
-        dogs[6] = new Dog(2);
-        dogs[7] = new Dog(1);
-        dogs[8] = new Dog(3);
-        dogs[9] = new Dog(2);
+        dogs[0] = new Dog(10);
+        dogs[1] = new Dog(15);
+        dogs[2] = new Dog(20);
+        dogs[3] = new Dog(15);
+        dogs[4] = new Dog(10);
+        dogs[5] = new Dog(15);
+        dogs[6] = new Dog(22);
+        dogs[7] = new Dog(15);
+        dogs[8] = new Dog(10);
+        dogs[9] = new Dog(5);
 
-        Dog[] outDogs = Dog.largerThanFourNeighbors(dogs);
+        Dog[] outDogs = DogLargerThanFourSolution.largerThanFourNeighbors(dogs);
+
+        for (Dog d : outDogs) {
+            System.out.println(d.weightInPounds);
+        }
     }
 }
