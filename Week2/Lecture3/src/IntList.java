@@ -8,6 +8,11 @@ public class IntList {
         this.next = next;
     }
 
+    public int size() {
+        if (next == null) return 1;
+        return 1 + next.size();
+    }
+
     public static void main(String[] args) {
         IntList list = new IntList(15, null);
         list = new IntList(10, list);
@@ -16,5 +21,7 @@ public class IntList {
         for (IntList i = list; i != null; i = i.next) {
             System.out.println(i.first);
         }
+
+        System.out.println(list.size());
     }
 }
