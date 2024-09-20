@@ -13,6 +13,16 @@ public class IntList {
         return 1 + next.size();
     }
 
+    public int iterativeSize() {
+        IntList list = this;
+        int size = 0;
+        while (list != null) {
+            list = list.next;
+            size++;
+        }
+        return size;
+    }
+
     public static void main(String[] args) {
         IntList list = new IntList(15, null);
         list = new IntList(10, list);
@@ -23,5 +33,6 @@ public class IntList {
         }
 
         System.out.println(list.size());
+        System.out.println(list.iterativeSize());
     }
 }
