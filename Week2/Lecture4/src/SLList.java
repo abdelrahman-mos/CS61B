@@ -1,5 +1,16 @@
 public class SLList {
-    public IntNode first;
+
+    private static class IntNode {
+        int item;
+        IntNode next;
+
+        IntNode(int first, IntNode next) {
+            this.item = first;
+            this.next = next;
+        }
+    }
+
+    private IntNode first;
 
     /* Creates a new list with one item x. */
     public SLList(int x) {
