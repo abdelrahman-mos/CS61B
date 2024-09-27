@@ -11,15 +11,18 @@ public class SLList {
     }
 
     private IntNode first;
+    private int size;
 
     /* Creates a new list with one item x. */
     public SLList(int x) {
         first = new IntNode(x, null);
+        size = 1;
     }
 
     /* add x to the front of the list. */
     public void addFirst(int x) {
         first = new IntNode(x, first);
+        size++;
     }
 
     /* add x to the back of the list. */
@@ -29,19 +32,12 @@ public class SLList {
             p = p.next;
         }
         p.next = new IntNode(x, null);
+        size++;
     }
 
     /* Returns the size of the list. */
     public int size() {
-        return size(first);
-    }
-
-    /* returns size of the list starting at IntNode p. */
-    private int size(IntNode p) {
-        if (p.next == null) {
-            return 1;
-        }
-        return 1 + size(p.next);
+        return size;
     }
 
     /* Returns the first item of the list. */
