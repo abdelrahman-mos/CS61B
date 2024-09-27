@@ -22,6 +22,28 @@ public class SLList {
         first = new IntNode(x, first);
     }
 
+    /* add x to the back of the list. */
+    public void addLast(int x) {
+        IntNode p = first;
+        while (p.next != null) {
+            p = p.next;
+        }
+        p.next = new IntNode(x, null);
+    }
+
+    /* Returns the size of the list. */
+    public int size() {
+        return size(first);
+    }
+
+    /* returns size of the list starting at IntNode p. */
+    private int size(IntNode p) {
+        if (p.next == null) {
+            return 1;
+        }
+        return 1 + size(p.next);
+    }
+
     /* Returns the first item of the list. */
     public int getFirst() {
         return first.item;
